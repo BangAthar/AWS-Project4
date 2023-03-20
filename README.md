@@ -31,4 +31,4 @@ Berikut beberapa service AWS yang kita butuhkan untuk praktek :
 
 # AWS Management Console
 
-<h1>Membuat VPC</h1>
+<h2>Membuat VPC</h2>
