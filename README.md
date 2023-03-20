@@ -29,6 +29,5 @@ Berikut beberapa service AWS yang kita butuhkan untuk praktek :
 * **AWS Auto Scaling**
 * **Auto Balancing**
 
-# AWS Management Console
+# Membuat VPC
 
-<h2>Membuat VPC</h2>
