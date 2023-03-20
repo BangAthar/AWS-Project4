@@ -31,3 +31,15 @@ Berikut beberapa service AWS yang kita butuhkan untuk praktek :
 
 # Membuat VPC
 
+Silahkan buka service VPC lali pilih `Create VPC`. Setelah itu silahkan buat VPC dengan contoh konfigurasi seperti dibawah ini :
+
+* **Name** : Project4
+* **IP CIDR** : 192.168.1.0/24
+* **AZs** : 2 (US-1a and US-1b)
+* **Subnets** : 2 (2 public and 2 private) 
+* **NAT Gateways** : 1 per AZ
+* **VPC endpoints** : None
+
+<div align="center">
+<img src="images/vpc.png" alt="Logo">
+</div>
