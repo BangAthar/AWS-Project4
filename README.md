@@ -49,3 +49,9 @@ Silahkan buka service VPC lalu pilih `Create VPC`. Setelah itu silahkan buat VPC
 Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan buat database dengan contoh konfigurasi seperti dibawah ini
 - `Engine` : MySQL, Memilih MySQL karena lebih mudah digunakan dan umum.
 - `Templates` : Free Tier, Menggunakan Free Tier karena database ini hanya digunakan praktek dan eksperimen.
+- `DB Instance Name` : db-project4, Nama database servernya bebas.
+- `Master Username` : admin, Nama username bebas.
+- `Master Password` : 12345678, Password username bebas.
+- `DB Instance Class` : db.t3.micro, Menggunakan type instance t3.micro
+- `Storage Type` : General Purpose SSD (gp2), berikut perbedaan jenis storage gp2 dan gp3
+<img src="images/jenis-storage.png" alt="Logo">
