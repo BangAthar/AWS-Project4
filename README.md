@@ -75,6 +75,6 @@ Karena pembuatan database ini hanya digunakan untuk praktek atau eksperimen, kit
 
 # Membuat Instance EC2 dan autoscaling
 
-<img src="templet.png" align="right" 
+<img src="images/templet.png" align="right" 
 alt="Size Limit logo by Anton Lovchikov" width="120" height="178">
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`
