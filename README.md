@@ -52,5 +52,13 @@ Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan bua
 - **Master Username**  : admin, Nama username bebas
 - **Master Password**  : 12345678, Password username bebas
 - **DB Instance Class**  : db.t3.micro, Menggunakan type instance t3.micro
-- **Storage Type**  : General Purpose SSD (gp2), berikut perbedaan jenis storage gp2 dan gp3
+- **Storage Type**  : General Purpose SSD (gp2), Berikut perbedaan jenis storage gp2 dan gp3
 <img src="images/jenis-storage.png" alt="Logo">
+
+- **Allocate Storage** : 20GiB, Menggunakan storage SSD dengan kapasitas sekitar 20GB
+- **Storage Autoscaling** : Enable, Otomatis menambah kapasitas storage ketika penuh hingga mencapai batas autoscaling yaitu sekitar 1000GB / 1TB
+- **Compute Resource** : Don't connect to an EC2 compute storage, Memilih untuk tidak mengsetup database ke EC2 secara langsung
+- **Network Type** : IPv4, Hanya menggunakan IP dengan versi 4
+- **VPC** : project4-vpc, Pilih VPC yang berusan kita buat tadi
+- **DB Subnet Group** : Create New, Membuat security subnet group untuk konektivitas database
+- **Public Access** : No, Karena RDS bertepatan pada subnet private AZ US-1a sesuai dengan gambar topologi diatas
