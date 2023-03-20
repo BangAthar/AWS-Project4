@@ -16,5 +16,5 @@
 
 # Topologi Project
 <div align="center">
-<img src="images/topologi.png" alt="Logo" width="800">
+<img src="images/topologi.png" alt="Logo" width="500">
 </div>
