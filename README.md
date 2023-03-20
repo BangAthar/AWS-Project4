@@ -60,5 +60,8 @@ Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan bua
 - **Compute Resource** : Don't connect to an EC2 compute storage, Memilih untuk tidak mengsetup database ke EC2 secara langsung
 - **Network Type** : IPv4, Hanya menggunakan IP dengan versi 4
 - **VPC** : project4-vpc, Pilih VPC yang berusan kita buat tadi
-- **DB Subnet Group** : Create New, Membuat security subnet group untuk konektivitas database
+- **DB Subnet Group** : Create New, Membuat subnet group baru
 - **Public Access** : No, Karena RDS bertepatan pada subnet private AZ US-1a sesuai dengan gambar topologi diatas
+- **VPC Security Group** : Create New, Membuat securitu group baru untuk konektivitas
+- **Security Group Name** : RDS-sg, Untuk nama terserah kalian
+- **Availibity Zone** : us-east-1a, Memilih us-1a karena subnet tersebut merupakan subnet private dari AZ us-east-1a sesuai dengan gambar topologi 
