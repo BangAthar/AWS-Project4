@@ -62,7 +62,7 @@ Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan bua
 - **VPC** : project4-vpc, Pilih VPC yang berusan kita buat tadi
 - **DB Subnet Group** : Create New, Membuat subnet group baru
 - **Public Access** : No, Karena RDS bertepatan pada subnet private AZ US-1a sesuai dengan gambar topologi diatas
-- **VPC Security Group** : Create New, Membuat securitu group baru untuk konektivitas
+- **VPC Security Group** : Create New, Membuat security group baru untuk konektivitas
 - **Security Group Name** : RDS-sg, Untuk nama terserah kalian
 - **Availibity Zone** : us-east-1a, Memilih us-1a karena subnet tersebut merupakan subnet private dari AZ us-east-1a sesuai dengan gambar topologi 
 
@@ -72,3 +72,9 @@ Karena pembuatan database ini hanya digunakan untuk praktek atau eksperimen, kit
 - **auto backup** : disable, mematikan sistem auto backup
 - **encryption** : disable, mematikan sistem enkripsi pada database
 - **auto minor** : disable, mematikan sistem maintenance yaitu minor version upgrade
+
+# Membuat Instance EC2 dan autoscaling
+
+<img src="templet.png" align="right" 
+alt="Size Limit logo by Anton Lovchikov" width="120" height="178">
+Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`
