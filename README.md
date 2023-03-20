@@ -39,7 +39,6 @@ Silahkan buka service VPC lalu pilih `Create VPC`. Setelah itu silahkan buat VPC
 - **Subnets**       : 2 (2 public and 2 private) 
 - **NAT Gateways**  : 1 per AZ
 - **VPC endpoints** : None
-
 <div align="center">
 <img src="images/vpc.png" alt="Logo">
 </div>
