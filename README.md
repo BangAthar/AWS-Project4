@@ -18,3 +18,13 @@
 <div align="center">
 <img src="images/topologi.png" alt="Logo" width="500">
 </div>
+
+Ini merupakan contoh topologi yang akan kita gunakan untuk praktek di dalam AWS Management Console.
+Berikut beberapa service AWS yang kita butuhkan untuk praktek :
+
+* **VPC**
+* **AWS EC2**
+* **EFS**
+* **RDS**
+* **AWS Auto Scaling**
+* **Auto Balancing**
