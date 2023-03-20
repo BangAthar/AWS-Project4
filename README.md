@@ -77,4 +77,4 @@ Karena pembuatan database ini hanya digunakan untuk praktek atau eksperimen, kit
 
 <img src="images/templet.png" align="right" 
 alt="Size Limit logo by Anton Lovchikov">
-Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`
+Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
