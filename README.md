@@ -65,3 +65,5 @@ Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan bua
 - **VPC Security Group** : Create New, Membuat securitu group baru untuk konektivitas
 - **Security Group Name** : RDS-sg, Untuk nama terserah kalian
 - **Availibity Zone** : us-east-1a, Memilih us-1a karena subnet tersebut merupakan subnet private dari AZ us-east-1a sesuai dengan gambar topologi 
+
+<h3>Additional Configuration RDS</h3>
