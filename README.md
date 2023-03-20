@@ -67,6 +67,7 @@ Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan bua
 - **Availibity Zone** : us-east-1a, Memilih us-1a karena subnet tersebut merupakan subnet private dari AZ us-east-1a sesuai dengan gambar topologi 
 
 <h3>Additional Configuration RDS</h3>
+
 Karena pembuatan database ini hanya digunakan untuk praktek atau eksperimen, kita perlu mematikan beberapa fitur dari _additional configuration rds_ yaitu
 - **auto backup** : disable, mematikan sistem auto backup
 - **encryption** : disable, mematikan sistem enkripsi pada database
