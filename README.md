@@ -31,7 +31,7 @@ Berikut beberapa service AWS yang kita butuhkan untuk praktek :
 
 # Membuat VPC
 
-Silahkan buka service VPC lali pilih `Create VPC`. Setelah itu silahkan buat VPC dengan contoh konfigurasi seperti dibawah ini :
+Silahkan buka service VPC lalu pilih `Create VPC`. Setelah itu silahkan buat VPC dengan contoh konfigurasi seperti dibawah ini :
 
 * **Name**          : Project4
 * **IP CIDR**       : 192.168.1.0/24
@@ -43,3 +43,9 @@ Silahkan buka service VPC lali pilih `Create VPC`. Setelah itu silahkan buat VPC
 <div align="center">
 <img src="images/vpc.png" alt="Logo">
 </div>
+
+# Membuat Database
+
+Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan buat database dengan contoh konfigurasi seperti dibawah ini
+- `Engine` : MySQL, Memilih MySQL karena lebih mudah digunakan dan umum.
+- `Templates` : Free Tier, Menggunakan Free Tier karena database ini hanya digunakan praktek dan eksperimen.
