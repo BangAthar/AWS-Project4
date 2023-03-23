@@ -77,7 +77,7 @@ Karena pembuatan database ini hanya digunakan untuk praktek atau eksperimen, kit
 
 <h3>Membuat Template EC2</h3>
 Launch Template pada AWS EC2 adalah sebuah template yang digunakan membuat instance secara konsisten. Dengan menggunakan launch template, pengguna dapat membuat instance dengan konfigurasi yang sama secara konsisten, sehingga tidak perlu lagi melakukan konfigurasi manual setiap kali membuat instance.
-
+</br>
 
 <img src="images/templet.png" align="right" 
 alt="Size Limit logo by Anton Lovchikov">
