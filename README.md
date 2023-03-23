@@ -103,3 +103,8 @@ alt="" width=280>
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Auto Scaling Groups`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create Auto Scaling Group`.
 
 Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di bawah ini :
+- **Auto Scaling Group Name** : ASG-project4, Nama terserah
+- **Launch Template** : template-project4, Pilih template yang barusan kita buat
+```css
+Klik Next
+```
