@@ -80,7 +80,7 @@ Launch Template pada AWS EC2 adalah sebuah template yang digunakan membuat insta
 </br>
 
 <img src="images/templet.png" align="right" 
-alt="Size Limit logo by Anton Lovchikov">
+alt="">
 
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
 
@@ -93,3 +93,13 @@ Silahkan ikuti contoh konfigurasi untuk membuat template EC2 seperti di bawah in
 - **Security Group Name** : template-webserver, Membuat security group baru dengan nama terserah
 - **Desc SG** : template, Deskripsi security terserah
 - **Inbound Rules** : SSH, HTTP, HTTPS, source type anyware semua.
+
+<h3>Membuat Autoscaling Group</h3>
+Autoscaling group memungkinkan pengguna untuk mengatur skala otomatis pada instance EC2. Pengguna dapat mengatur jumlah instance EC2 yang dibuat secara otomatis sesuai dengan permintaan, sehingga dapat meminimalkan biaya dan memaksimalkan kinerja instance.
+
+<img src="images/auto.png" align="right" 
+alt="">
+
+Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Auto Scaling Groups`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create Auto Scaling Group`.
+
+Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di bawah ini :
