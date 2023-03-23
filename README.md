@@ -113,6 +113,11 @@ Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di ba
 - **Load Balancer Type** : Application Load Balancer
 - **Load balancer scheme** : internet-facing, jenis load balancer yang ditempatkan di jaringan publik atau internet-facing subnet.
 - **Network Mapping Az dan Subnets** : Pilih public subnet semua dari US-1a dan US-1b
-- **Listeners and routing** : Create a target group, 
+- **Listeners and routing** : Create a target group
 - **Health Checks** : ELB Checklist, Fungsi utama dari ELB adalah untuk meningkatkan ketersediaan dan skalabilitas aplikasi, memastikan bahwa permintaan pengguna diproses oleh instance EC2 yang tersedia, dan mengelola kesehatan instance EC2 untuk mencegah lalu lintas yang dibagikan ke instance yang tidak sehat.
-
+- _**Next**_
+- **Group Size** : untuk kapasitasnya berikan di angka 2 semua, Yang berfungsi autoscaling akan secara otomatis membuat 2 instance sekaligus dengan max capacity 5
+- _**Next**_
+- _**Next**_
+- _**Next**_
+- _**Create Auto Scaling group**_
