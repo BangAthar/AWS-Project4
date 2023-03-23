@@ -75,6 +75,9 @@ Karena pembuatan database ini hanya digunakan untuk praktek atau eksperimen, kit
 
 # Membuat Instance EC2 dan autoscaling
 
+<h3>Membuat Template EC2</h3>
+Launch Template pada AWS EC2 adalah sebuah template yang digunakan membuat instance secara konsisten. Dengan menggunakan launch template, pengguna dapat membuat instance dengan konfigurasi yang sama secara konsisten, sehingga tidak perlu lagi melakukan konfigurasi manual setiap kali membuat instance.
+
 <img src="images/templet.png" align="right" 
 alt="Size Limit logo by Anton Lovchikov">
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
