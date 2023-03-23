@@ -87,4 +87,4 @@ Silahkan ikuti contoh konfigurasi untuk membuat template EC2 seperti di bawah in
 - **Key Pair** : Vockey, Key pair lebih mudah di akses menggunakan vockey
 - **Security Group Name** : template-webserver, Membuat security group baru dengan nama terserah
 - **Desc SG** : template, Deskripsi security terserah
-- **** :
+- **Inbound Rules** : SSH, HTTP, HTTPS, source type anyware semua.
