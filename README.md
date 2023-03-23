@@ -81,6 +81,7 @@ Launch Template pada AWS EC2 adalah sebuah template yang digunakan membuat insta
 
 <img src="images/templet.png" align="right" 
 alt="Size Limit logo by Anton Lovchikov">
+
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
 
 Silahkan ikuti contoh konfigurasi untuk membuat template EC2 seperti di bawah ini :
