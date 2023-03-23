@@ -80,3 +80,11 @@ alt="Size Limit logo by Anton Lovchikov">
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
 
 Silahkan ikuti contoh konfigurasi untuk membuat template EC2 seperti di bawah ini :
+- **Template Name** : template-project4, Nama dari template yang kita buat
+- **Template Ver Desc** : praktek project4, Deskripsi untuk template
+- **OS Images** : Debian, Kita akan mencoba membuat instance dengan OS Linux Debian
+- **Instance Type** : t3.micro, Karena dengan type instance t3.micro memiliki spesifikasi yg agak besar yaitu 2vCPU dan 1GB RAM
+- **Key Pair** : Vockey, Key pair lebih mudah di akses menggunakan vockey
+- **Security Group Name** : template-webserver, Membuat security group baru dengan nama terserah
+- **Desc SG** : template, Deskripsi security terserah
+- **** :
