@@ -98,7 +98,7 @@ Silahkan ikuti contoh konfigurasi untuk membuat template EC2 seperti di bawah in
 Autoscaling group memungkinkan pengguna untuk mengatur skala otomatis pada instance EC2. Pengguna dapat mengatur jumlah instance EC2 yang dibuat secara otomatis sesuai dengan permintaan, sehingga dapat meminimalkan biaya dan memaksimalkan kinerja instance.
 
 <img src="images/auto.png" align="right" 
-alt="" width=150>
+alt="" width=200>
 
 Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Auto Scaling Groups`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create Auto Scaling Group`.
 
