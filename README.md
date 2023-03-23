@@ -106,3 +106,13 @@ Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di ba
 - **Auto Scaling Group Name** : ASG-project4, Nama terserah
 - **Launch Template** : template-project4, Pilih template yang barusan kita buat
 - _**Next**_
+- **VPC** : project4-vpc, Pilih VPC yang barusan dibuat tadi
+- **Az Dan Subnet** : private 1a dan private 1b, Pilih subnet private 1a dan 1b karena instance akan di taruh kedalam subnet tersebut sesuai dengan topologi diatas
+- _**Next**_
+- **Load Balacing** : Attach to a new load balancer, Dengan memilih pilihan tersebut akan secara otomatis instance yang di konfigurasi dengan auto scaling akan terpasang auto balancer
+- **Load Balancer Type** : Application Load Balancer
+- **Load balancer scheme** : internet-facing, jenis load balancer yang ditempatkan di jaringan publik atau internet-facing subnet.
+- **Network Mapping Az dan Subnets** : Pilih public subnet semua dari US-1a dan US-1b
+- **Listeners and routing** : Create a target group, 
+- **Health Checks** : ELB Checklist, Fungsi utama dari ELB adalah untuk meningkatkan ketersediaan dan skalabilitas aplikasi, memastikan bahwa permintaan pengguna diproses oleh instance EC2 yang tersedia, dan mengelola kesehatan instance EC2 untuk mencegah lalu lintas yang dibagikan ke instance yang tidak sehat.
+
