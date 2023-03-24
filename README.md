@@ -124,14 +124,13 @@ Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di ba
 
 Silahkan untuk check kembali instance, target group, dan load balancer apakah sudah sukses berjalan normal. Pastikan untuk instance sudah terdapat 2 instance dengan OS Debian dan health check pada target group berstatus health warna hijau.
 
-<h3>Mengatur Security Group</h3>
+<h3>Mengatur Security Group RDS</h3>
 
-RDS security group akan ditambahkan ke dalam template security group yang bertujuan agar instance yang barusan di create menggunakan auto scaling akan memeliki akses ke RDS.
-
-- Buka security group template-webserver, sesuai dengan security group template yang barusan buat tadi di auto scaling group
+- Buka security group RDS-sg
 - Pilih edit inbound rules
-- Add rule MySQL
-- Sourcenya arahin ke RDS-sg
+- remove rule MySQL
+- lalu add lagi rule MySQL
+- Sourcenya arahin ke template-webserver (security group yang barusan dibuat lewat auto scaling group)
 - Save
 
 <h3>Membuat Security Group EFS</h3>
@@ -281,7 +280,7 @@ npm install -g cors
 npm install -g body-parser
 ```
 
-18. Buka direktori ukk/src/model dan edit file dbConnection.js untuk mengsetup database connection
+18. Buka direktori ``ukk/src/model`` dan edit file dbConnection.js untuk mengsetup database connection
 ```js
 const mySql = require("mysql")
 
@@ -303,6 +302,12 @@ mysql -h <RDS endpoin> -u <username> -p
 #show database
 show databases;
  
+# create database
+create database cloud_api;
+
+# enter database
+use cloud_api;
+
 # create table
 CREATE TABLE guru (
 id_guru int(11) AUTO_INCREMENT PRIMARY KEY,
@@ -311,12 +316,10 @@ mapel_guru varchar(255),
 sekolah_guru varchar(255)
 );
   
-#Select table
-use cloud_api;
-  
 # insert guru
 
 INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Adi','cloud','SMK Telkom Malang');
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Nopal','Teknik Kuli Jawa','SMK Telkom Malang');
   
 # update guru
 UPDATE guru SET nama_guru = ?, mapel_guru = ?, sekolah_guru = ? WHERE id_guru = ?;
@@ -324,3 +327,20 @@ UPDATE guru SET nama_guru = ?, mapel_guru = ?, sekolah_guru = ? WHERE id_guru = 
 # delete guru
 DELETE FROM guru WHERE id_guru = ?;
 ```
+
+20. Back to src directory
+```sh
+cd /home/admin/efs/ukk/src
+```
+
+21. Menjalankan project
+```sh
+npm run start
+```
+
+22. Testing your project
+```sh
+<dns endpoint ELB>/api/guru/v1
+```
+
+Done.
