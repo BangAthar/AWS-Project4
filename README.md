@@ -252,4 +252,8 @@ cd /home/admin
 mkdir efs
 ```
 
-13. 
+13. Mount EFS ke direktori EFS server debian
+```sh
+mount -t efs -o tls fs-09944e3f023b56381:/ /home/admin/efs
+```
+Untuk command line mounting bisa lihat melalui EFS console dengan cara buka service EFS > pilih efs-project4 > pilih attach.
