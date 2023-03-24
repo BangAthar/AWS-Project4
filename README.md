@@ -182,3 +182,22 @@ alt="" width="280" align="center">
 
 Sebelum memulai konfigurasi harap download terlebih dahulu file ppk untuk SSH Key
 Silahkan buka SSH Client kalian seperti Putty, Bitvise SSH, Termius, dll dan konekkan bastion host ke SSH Client
+
+Setelah berhasil terkoneksi ke Bastion Host, kita akan melakukan konfigurasi web server yang berada pada AZ 1
+
+- Connect ke webserver AZ 1
+```sh
+ssh admin@(IP)
+```
+
+<h3>Command Line Web Server AZ 1</h3>
+
+1. Masuk root user
+```sh
+sudo su
+```
+
+2. Update dan upgrade sistem
+```sh
+apt update -y && apt upgrade -y
+```
