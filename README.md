@@ -343,4 +343,7 @@ npm run start
 <dns endpoint ELB>/api/guru/v1
 ```
 
-Done.
+# Contributor
+
+- [BangAthar](https://github.com/BangAthar)
+- [OmTegar](https://github.com/OmTegar)
