@@ -173,3 +173,10 @@ Pilih ``Customize`` dan buatlah EFS dengan contoh konfigurasi seperti dibawah in
 - _**Next**_
 - _**Next**_
 - _**Create**_
+
+# Konfigurasi Linux
+Disini saya menggunakan learner lab AWS Academy
+<img src="images/ppk.png" 
+alt="" width=280>
+Sebelum memulai konfigurasi harap download terlebih dahulu file ppk untuk SSH Key
+Silahkan buka SSH Client kalian seperti Putty, Bitvise SSH, Termius, dll dan konekkan bastion host ke SSH Client
