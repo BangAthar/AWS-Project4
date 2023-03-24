@@ -121,3 +121,5 @@ Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di ba
 - _**Next**_
 - _**Next**_
 - _**Create Auto Scaling group**_
+
+silahkan untuk check kembali instance, target group, dan load balancer apakah sudah sukses berjalan normal. Pastikan untuk instance sudah terdapat 2 instance dengan OS Debian dan health check pada target group berstatus health warna hijau.
