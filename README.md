@@ -201,3 +201,55 @@ sudo su
 ```sh
 apt update -y && apt upgrade -y
 ```
+
+3. Download dan mengeksekusi NodeSource instalasi
+```sh
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+```
+
+4. Install nodejs
+```sh
+apt install nodejs -y
+```
+
+5. Menginstall beberapa package untuk kebutuhan server
+```sh
+apt install rsync build-essential git default-mysql-client -y
+```
+
+6. Install package binutils
+```sh
+apt install binutils -y
+```
+
+7. Download efs-utils tool
+```sh
+git clone https://github.com/aws/efs-utils.git
+```
+
+8. Masuk ke direktori efs-utils
+```sh
+cd efs-utils
+```
+
+9. Menjalankan script bash efs-utils
+```sh
+./build-deb.sh
+```
+
+10. Instaling amazon efs utils
+```sh
+apt -y install ./build/amazon-efs-utils*deb
+```
+
+11. Back to home
+```sh
+cd /home/admin
+```
+
+12. Membuat direktori EFS
+```sh
+mkdir efs
+```
+
+13. 
