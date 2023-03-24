@@ -125,7 +125,9 @@ Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di ba
 Silahkan untuk check kembali instance, target group, dan load balancer apakah sudah sukses berjalan normal. Pastikan untuk instance sudah terdapat 2 instance dengan OS Debian dan health check pada target group berstatus health warna hijau.
 
 <h3>Mengatur Security Group</h3>
+
 RDS security group akan kita tambahkan ke dalam template security group yang bertujuan agar instance yang kita create menggunakan auto scaling akan memeliki akses ke RDS.
+
 - Buka security group template-webserver, sesuai dengan security group template yang kita buat tadi di auto scaling group
 - Pilih edit inbound rules
 - Add rule MySQL
