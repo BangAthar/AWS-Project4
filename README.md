@@ -150,3 +150,16 @@ Sesuai dengan topologi diatas fungsi bastion bertujuan untuk mengakses instance 
 
 # Membuat EFS
 
+Pilih ``Customize`` dan buatlah EFS dengan contoh konfigurasi seperti dibawah ini :
+- **Name** : efs-project4, Nama terserah
+- **Storage Class** : standart, Dengan memilih opsi standart memiliki jangkauan multiple AZs
+- **Automatic Backup** : disable, Karena EFS hanya digunakan praktek jadi untuk auto backup tidak terlalu penting
+- **Encryption** : disable, Karena EFS hanya digunakan praktek jadi untuk sistem encryption data tidak terlalu penting
+- **Performance Setting** : Bursting, Fitur bursting memungkinkan file system EFS untuk menangani beban kerja yang lebih tinggi secara dinamis
+- _**Next**_
+- **VPC** : project4-vpc
+- **Subnet** : Semua subnet di arahkan ke private
+- **Security Group** : Semua security group arahkan ke template-webserve (security group yang dibuat melalui auto scaling group)
+- _**Next**_
+- _**Next**_
+- _**Create**_
