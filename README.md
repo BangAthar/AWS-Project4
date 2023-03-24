@@ -146,7 +146,7 @@ Sesuai dengan topologi diatas fungsi bastion bertujuan untuk mengakses instance 
 - **Public IP** : enable
 - **Security Group** : Create New dengan nama bastion-sg, description bebas
 - **Rule** : SSH, HTTP, HTTPS, source anyware semua
-- **Launch Instance** :   
+- **Launch Instance**  
 
 # Membuat EFS
 
