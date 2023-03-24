@@ -133,3 +133,20 @@ RDS security group akan ditambahkan ke dalam template security group yang bertuj
 - Add rule MySQL
 - Sourcenya arahin ke RDS-sg
 - Save
+
+<h3>Membuat instance bastion host</h3>
+
+Sesuai dengan topologi diatas fungsi bastion bertujuan untuk mengakses instance yang berada pada subnet private dan silahkan untuk membuat bastion host dengan contoh konfigurasi seperti di bawah ini
+
+- **Name** : Bastion Host
+- **Image** : Debian
+- **Key Pair** : Vockey
+- **VPC** : project4-vpc
+- **Subnet** : public us-ease-1b, Sesuai dengan topologi bastion host berada pada public subnet AZ 2 yaitu us-east-1b
+- **Public IP** : enable
+- **Security Group** : Create New dengan nama bastion-sg, description bebas
+- **Rule** : SSH, HTTP, HTTPS, source anyware semua
+- **Launch Instance** :   
+
+# Membuat EFS
+
