@@ -134,6 +134,16 @@ RDS security group akan ditambahkan ke dalam template security group yang bertuj
 - Sourcenya arahin ke RDS-sg
 - Save
 
+<h3>Membuat Security Group EFS</h3>
+
+Membuat security group baru untuk kebutuhan EFS yang berfungsi untuk memberi akses EFS ke instance.
+- Create Security Group 
+- Security Group Namenya EFS-sg
+- Deskripsi bebas
+- Pilih VPC project4-vpc
+- Add rule NFS
+- Sourcenya arahin ke template-webserver (security group yang barusan kita buat di auto scaling group)
+
 <h3>Membuat instance bastion host</h3>
 
 Sesuai dengan topologi diatas fungsi bastion bertujuan untuk mengakses instance yang berada pada subnet private dan silahkan untuk membuat bastion host dengan contoh konfigurasi seperti di bawah ini
@@ -159,7 +169,7 @@ Pilih ``Customize`` dan buatlah EFS dengan contoh konfigurasi seperti dibawah in
 - _**Next**_
 - **VPC** : project4-vpc
 - **Subnet** : Semua subnet di arahkan ke private
-- **Security Group** : Semua security group arahkan ke template-webserve (security group yang dibuat melalui auto scaling group)
+- **Security Group** : Semua security group arahkan ke EFS-sg
 - _**Next**_
 - _**Next**_
 - _**Create**_
