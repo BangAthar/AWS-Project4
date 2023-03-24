@@ -131,5 +131,5 @@ RDS security group akan kita tambahkan ke dalam template security group yang ber
 - Buka security group template-webserver, sesuai dengan security group template yang kita buat tadi di auto scaling group
 - Pilih edit inbound rules
 - Add rule MySQL
-- Sourcenya kita arahin ke RDS-sg
+- Sourcenya arahin ke RDS-sg
 - Save
