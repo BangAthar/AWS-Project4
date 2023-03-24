@@ -257,3 +257,70 @@ mkdir efs
 mount -t efs -o tls fs-09944e3f023b56381:/ /home/admin/efs
 ```
 Untuk command line mounting bisa lihat melalui EFS console dengan cara buka service EFS > pilih efs-project4 > pilih attach.
+
+14. Silahkan cek apakah efs sudah berhasil terpasang
+```sh
+df -h
+```
+
+15. Masuk ke dalam direktori efs dan download app deploymentnya
+```sh
+cd /home/admin/efs && git clone https://github.com/adinur21/ukk.git
+```
+
+16. Masuk ke dalam direktori ukk dan install npm package
+```sh
+cd ukk/ && npm install
+```
+
+17. Install node modul ke dalam project
+```sh
+npm install --save express
+npm install -g nodemon
+npm install -g cors
+npm install -g body-parser
+```
+
+18. Buka direktori ukk/src/model dan edit file dbConnection.js untuk mengsetup database connection
+```js
+const mySql = require("mysql")
+
+const db = mySql.createPool({
+  host: "db-project4.cwtinss4gobn.us-east-1.rds.amazonaws.com",
+  user: "admin",
+  password: "12345678",
+  database: "cloud_api"
+})
+
+exports.db = db;
+```
+
+19. konfigurasi database
+```sh
+# connect database
+mysql -h <RDS endpoin> -u <username> -p
+  
+#show database
+show databases;
+ 
+# create table
+CREATE TABLE guru (
+id_guru int(11) AUTO_INCREMENT PRIMARY KEY,
+nama_guru varchar(255),
+mapel_guru varchar(255),
+sekolah_guru varchar(255)
+);
+  
+#Select table
+use cloud_api;
+  
+# insert guru
+
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Adi','cloud','SMK Telkom Malang');
+  
+# update guru
+UPDATE guru SET nama_guru = ?, mapel_guru = ?, sekolah_guru = ? WHERE id_guru = ?;
+  
+# delete guru
+DELETE FROM guru WHERE id_guru = ?;
+```
