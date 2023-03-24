@@ -126,3 +126,8 @@ Silahkan untuk check kembali instance, target group, dan load balancer apakah su
 
 <h3>Mengatur Security Group</h3>
 RDS security group akan kita tambahkan ke dalam template security group yang bertujuan agar instance yang kita create menggunakan auto scaling akan memeliki akses ke RDS.
+- Buka security group template-webserver, sesuai dengan security group template yang kita buat tadi di auto scaling group
+- Pilih edit inbound rules
+- Add rule MySQL
+- Sourcenya kita arahin ke RDS-sg
+- Save
