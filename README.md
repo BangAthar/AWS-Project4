@@ -47,7 +47,7 @@ Silahkan buka service VPC lalu pilih `Create VPC`. Setelah itu silahkan buat VPC
 
 Silahkan buka service RDS lalu pilih `Create database`. Setelah itu silahkan buat database dengan contoh konfigurasi seperti dibawah ini
 - **Engine**  : MySQL, Memilih MySQL karena lebih mudah digunakan dan umum
-- **Templates**  : Free Tier, Menggunakan Free Tier karena database ini hanya digunakan praktek dan eksperimen
+- **Templates**  : Free Tier,
 - **DB Instance Name** : db-project4, Nama database servernya bebas
 - **Master Username**  : admin, Nama username bebas
 - **Master Password**  : 12345678, Password username bebas
@@ -82,10 +82,10 @@ Launch Template pada AWS EC2 adalah sebuah template yang digunakan membuat insta
 <img src="images/templet.png" align="right" 
 alt="">
 
-Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan kita akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
+Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar atau panel sebelah kiri terdapat menu `Launch Templates`, klik menu tersebut dan akan diarahkan untuk membuat EC2 launch template dan klik `Create launch template`.
 
 Silahkan ikuti contoh konfigurasi untuk membuat template EC2 seperti di bawah ini :
-- **Template Name** : template-project4, Nama dari template yang kita buat
+- **Template Name** : template-project4, Nama dari template yang di buat
 - **Template Ver Desc** : praktek project4, Deskripsi untuk template
 - **OS Images** : Debian, Kita akan mencoba membuat instance dengan OS Linux Debian
 - **Instance Type** : t3.micro, Karena dengan type instance t3.micro memiliki spesifikasi yg agak besar yaitu 2vCPU dan 1GB RAM
@@ -104,7 +104,7 @@ Silahkan buka service EC2, jika halaman dashboard sudah terbuka dibagian sidebar
 
 Silahkan ikuti contoh konfigurasi untuk membuat auto scaling group seperti di bawah ini :
 - **Auto Scaling Group Name** : ASG-project4, Nama terserah
-- **Launch Template** : template-project4, Pilih template yang barusan kita buat
+- **Launch Template** : template-project4, Pilih template yang barusan di buat
 - _**Next**_
 - **VPC** : project4-vpc, Pilih VPC yang barusan dibuat tadi
 - **Az Dan Subnet** : private 1a dan private 1b, Pilih subnet private 1a dan 1b karena instance akan di taruh kedalam subnet tersebut sesuai dengan topologi diatas
@@ -126,9 +126,9 @@ Silahkan untuk check kembali instance, target group, dan load balancer apakah su
 
 <h3>Mengatur Security Group</h3>
 
-RDS security group akan kita tambahkan ke dalam template security group yang bertujuan agar instance yang kita create menggunakan auto scaling akan memeliki akses ke RDS.
+RDS security group akan ditambahkan ke dalam template security group yang bertujuan agar instance yang barusan di create menggunakan auto scaling akan memeliki akses ke RDS.
 
-- Buka security group template-webserver, sesuai dengan security group template yang kita buat tadi di auto scaling group
+- Buka security group template-webserver, sesuai dengan security group template yang barusan buat tadi di auto scaling group
 - Pilih edit inbound rules
 - Add rule MySQL
 - Sourcenya arahin ke RDS-sg
