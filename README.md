@@ -392,6 +392,7 @@ const db = mySql.createPool({
 exports.db = db;
 EOF
 
+cd /home/ubuntu/efs/
 sudo rsync -azP /var/log/ $DNSEFS
 ```
 
