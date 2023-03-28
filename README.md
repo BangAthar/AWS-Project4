@@ -420,7 +420,9 @@ use cloud_api;
 
 # Import the SQL script to create tables and populate data
 INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Adi','cloud','SMK Telkom Malang');
-INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('OmTegar','Hacker','STM Kuli Malang');
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('OmTegar','Kuli Jawa','STM Kuli Telkom');
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Nopal','Kuli Jawa','STM Kuli Telkom');
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Julpan','Kuli Jawa','STM Kuli Telkom');
 
 # Show tables in the datasiswa database
 show tables;
