@@ -398,8 +398,6 @@ sudo rsync -azP /var/log/ $DNSEFS
 
 24. MYSQL RDS Rebuild
 ```sh
-#!/bin/bash
-
 mysql -h database-1.cefenxcilrp4.us-east-1.rds.amazonaws.com -u admin -p <<EOF
 
 # Show existing databases
