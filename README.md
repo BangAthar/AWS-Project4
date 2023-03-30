@@ -332,7 +332,9 @@ df -h
 ```
 
 15. Melakukan rsync data log server kedalam EFS
+```sh
 rsync -avz /var/log /home/admin/efs
+```
 
 16. Auto script mytemplate userdata
 ```sh
