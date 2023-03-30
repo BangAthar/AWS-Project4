@@ -320,23 +320,23 @@ EOF
 <dns endpoint ELB>/api/guru/v1
 ```
 
-13. Mount EFS ke direktori EFS server debian
+18. Mount EFS ke direktori EFS server debian
 ```sh
 mount -t efs -o tls fs-09944e3f023b56381:/ /home/admin/efs
 ```
 Untuk command line mounting bisa lihat melalui EFS console dengan cara buka service EFS > pilih efs-project4 > pilih attach.
 
-14. Silahkan cek apakah efs sudah berhasil terpasang
+19. Silahkan cek apakah efs sudah berhasil terpasang
 ```sh
 df -h
 ```
 
-15. Melakukan rsync data log server kedalam EFS
+20. Melakukan rsync data log server kedalam EFS
 ```sh
 rsync -avz /var/log /home/admin/efs
 ```
 
-16. Auto script mytemplate userdata
+21. Auto script mytemplate userdata
 ```sh
 #!/bin/bash
 
