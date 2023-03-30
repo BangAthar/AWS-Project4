@@ -246,33 +246,17 @@ apt -y install ./build/amazon-efs-utils*deb
 cd /home/admin
 ```
 
-12. Membuat direktori EFS
+12. Download app deploymentnya
 ```sh
-mkdir efs
+git clone https://github.com/adinur21/ukk.git
 ```
 
-13. Mount EFS ke direktori EFS server debian
-```sh
-mount -t efs -o tls fs-09944e3f023b56381:/ /home/admin/efs
-```
-Untuk command line mounting bisa lihat melalui EFS console dengan cara buka service EFS > pilih efs-project4 > pilih attach.
-
-14. Silahkan cek apakah efs sudah berhasil terpasang
-```sh
-df -h
-```
-
-15. Masuk ke dalam direktori efs dan download app deploymentnya
-```sh
-cd /home/admin/efs && git clone https://github.com/adinur21/ukk.git
-```
-
-16. Masuk ke dalam direktori ukk dan install npm package
+13. Masuk ke dalam direktori ukk dan install npm package
 ```sh
 cd ukk/ && npm install
 ```
 
-17. Install node modul ke dalam project
+14. Install node modul ke dalam project
 ```sh
 npm install --save express
 npm install -g nodemon
@@ -280,7 +264,7 @@ npm install -g cors
 npm install -g body-parser
 ```
 
-18. Buka direktori ``ukk/src/model`` dan edit file dbConnection.js untuk mengsetup database connection
+15. Buka direktori ``ukk/src/model`` dan edit file dbConnection.js untuk mengsetup database connection
 ```js
 const mySql = require("mysql")
 
@@ -294,56 +278,63 @@ const db = mySql.createPool({
 exports.db = db;
 ```
 
-19. konfigurasi database
+16. MYSQL RDS Rebuild
 ```sh
-# connect database
-mysql -h <RDS endpoin> -u <username> -p
-  
-#show database
+mysql -h database-1.cefenxcilrp4.us-east-1.rds.amazonaws.com -u admin -p <<EOF
+
+# Show existing databases
 show databases;
- 
-# create database
+
+# Create the datasiswa database
 create database cloud_api;
 
-# enter database
+# Use the datasiswa database
 use cloud_api;
 
 # create table
-CREATE TABLE guru (
-id_guru int(11) AUTO_INCREMENT PRIMARY KEY,
-nama_guru varchar(255),
-mapel_guru varchar(255),
-sekolah_guru varchar(255)
-);
-  
-# insert guru
+  CREATE TABLE guru (
+  id_guru int(11) AUTO_INCREMENT PRIMARY KEY,
+  nama_guru varchar(255),
+  mapel_guru varchar(255),
+  sekolah_guru varchar(255)
+  );
 
+# Import the SQL script to create tables and populate data
 INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Adi','cloud','SMK Telkom Malang');
-INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Nopal','Teknik Kuli Jawa','SMK Telkom Malang');
-  
-# update guru
-UPDATE guru SET nama_guru = ?, mapel_guru = ?, sekolah_guru = ? WHERE id_guru = ?;
-  
-# delete guru
-DELETE FROM guru WHERE id_guru = ?;
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('OmTegar','Kuli Jawa','STM Kuli Telkom');
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Nopal','Kuli Jawa','STM Kuli Telkom');
+INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Julpan','Kuli Jawa','STM Kuli Telkom');
+
+# Show tables in the datasiswa database
+show tables;
+
+# Select data from the users table
+SELECT * FROM guru;
+
+# Exit the MySQL prompt
+EOF
 ```
 
-20. Back to src directory
-```sh
-cd /home/admin/efs/ukk/src
-```
-
-21. Menjalankan project
-```sh
-npm run start
-```
-
-22. Testing your project
+17. Testing your project
 ```sh
 <dns endpoint ELB>/api/guru/v1
 ```
 
-23. mytemplate userdata 
+13. Mount EFS ke direktori EFS server debian
+```sh
+mount -t efs -o tls fs-09944e3f023b56381:/ /home/admin/efs
+```
+Untuk command line mounting bisa lihat melalui EFS console dengan cara buka service EFS > pilih efs-project4 > pilih attach.
+
+14. Silahkan cek apakah efs sudah berhasil terpasang
+```sh
+df -h
+```
+
+15. Melakukan rsync data log server kedalam EFS
+rsync -avz /var/log /home/admin/efs
+
+16. Auto script mytemplate userdata
 ```sh
 #!/bin/bash
 
@@ -394,43 +385,6 @@ EOF
 
 cd /home/ubuntu/efs/
 sudo rsync -azP /var/log/ $DNSEFS
-```
-
-24. MYSQL RDS Rebuild
-```sh
-mysql -h database-1.cefenxcilrp4.us-east-1.rds.amazonaws.com -u admin -p <<EOF
-
-# Show existing databases
-show databases;
-
-# Create the datasiswa database
-create database cloud_api;
-
-# Use the datasiswa database
-use cloud_api;
-
-# create table
-  CREATE TABLE guru (
-  id_guru int(11) AUTO_INCREMENT PRIMARY KEY,
-  nama_guru varchar(255),
-  mapel_guru varchar(255),
-  sekolah_guru varchar(255)
-  );
-
-# Import the SQL script to create tables and populate data
-INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Adi','cloud','SMK Telkom Malang');
-INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('OmTegar','Kuli Jawa','STM Kuli Telkom');
-INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Nopal','Kuli Jawa','STM Kuli Telkom');
-INSERT INTO guru (nama_guru, mapel_guru, sekolah_guru) VALUES ('Julpan','Kuli Jawa','STM Kuli Telkom');
-
-# Show tables in the datasiswa database
-show tables;
-
-# Select data from the users table
-SELECT * FROM guru;
-
-# Exit the MySQL prompt
-EOF
 ```
 
 
